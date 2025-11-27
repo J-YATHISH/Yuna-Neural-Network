@@ -287,7 +287,7 @@ class ModelEvaluator:
             'confusion_matrix': cm.tolist()
         }
 
-# PHASE 4: REAL-TIME INFERENCE (DEPLOYMENT)
+#Real time detection
 
 class ThreatDetector:
     """Production-ready threat detector for YUNA Firewall."""
@@ -379,10 +379,6 @@ def main():
     trainer = ModelTrainer(model)
     history = trainer.train(X_train, y_train, X_val, y_val, 
                            epochs=20, batch_size=64, patience=3)
-    
-    
-    #trainer.plot_training_history()  # Plot training history
-
     logger.info("\n[PHASE 4] MODEL EVALUATION")
     evaluator = ModelEvaluator()
     results = evaluator.evaluate(model, X_test, y_test)
