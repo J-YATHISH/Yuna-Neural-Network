@@ -1,0 +1,6 @@
+{
+    "packet_rate_max": 1000.0,
+    "packet_size_max": 10.0,
+    "duration_max": 24.0,
+    "port_max": 65535.0
+}
